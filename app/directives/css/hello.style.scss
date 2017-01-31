@@ -1,0 +1,13 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: orange;
+$px1-border:1px solid siler;
+$padding20px:20px;
+$big-font:24px;
+
+h1 {
+  font: 100% $font-stack;
+  font-size:$big-font;
+  color: $primary-color;
+  border:$px1-border;
+  padding: $padding20px;
+}

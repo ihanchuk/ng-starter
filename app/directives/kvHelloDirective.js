@@ -1,8 +1,10 @@
 module.exports = function() {
+    require("./css/hello.style.scss");
+    require("./css/hello.style.css");
     return function () {
         return {
             restrict: "E",
-            template: "<h1>Hello,world!   Im directive23423</h1>"
+            template: require("./templates/helloTemplate.html")
         };
     }
 }
