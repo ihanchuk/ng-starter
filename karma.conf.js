@@ -17,7 +17,8 @@ module.exports = function(config) {
     frameworks: ['mocha','chai'],
 
     // list of files / patterns to load in the browser
-    files: [entry],
+    files: ["./app/test/*"],
+    // files: [entry],
     webpack:webPackConfig,
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
