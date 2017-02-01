@@ -22,7 +22,13 @@ module.exports = function(config) {
     webpack:webPackConfig,
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: processors,
+    // preprocessors: processors,
+
+    preprocessors: {
+      // add webpack as preprocessor
+      './app/test/*': ['webpack'],
+      
+    },
 
     // list of files to exclude
     exclude: [
