@@ -1,5 +1,7 @@
+module.exports=function(){
     describe("easy test",function(){
         it("shouldd run",function(){
-          expect(false).to.be.true;
+            expect(false).to.be.true;
         });
     });
+}

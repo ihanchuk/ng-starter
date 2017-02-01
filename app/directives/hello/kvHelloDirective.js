@@ -1,5 +1,6 @@
 if (TEST_ENV) {
-    require("./tests/hello.test.js");
+    var x = require("./tests/hello.test.js");
+    console.log(x());
 }
 
 module.exports = function() {
