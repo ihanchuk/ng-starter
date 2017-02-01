@@ -1,7 +1,10 @@
-var path = require('path');
+const path = require('path');
 const appPath =path.join(__dirname , '/app/');
 const rootEntryFile = appPath + 'index.js';
 const loadersPath = path.join(__dirname, 'node_modules');
+
+var webpack = require("webpack");
+
 module.exports = {
     context: appPath,
     entry: rootEntryFile,
@@ -12,6 +15,11 @@ module.exports = {
     resolveLoader: {
         root: loadersPath
     },
+    plugins:[
+        new webpack.DefinePlugin({
+            TEST_ENV:process.env.NODE_ENV === "test"
+        })
+    ],
     module: {
         loaders: [
             { test: /\.js/, loader: "babel-loader"},
