@@ -4,7 +4,9 @@
   "description": "Project Boilerplate",
   "scripts": {
     "dev": "webpack-dev-server --content-base app/ --progress --colors ",
-    "test": "set NODE_ENV=test && karma start"
+    "hot": "webpack-dev-server --content-base app/ --progress --colors --inline --hot",
+    "test": "set NODE_ENV=test && karma start",
+    "prod":"webpack -p"
   },
   "dependencies": {
     "angular": "1.5.0"
