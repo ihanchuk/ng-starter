@@ -4,4 +4,4 @@ app/bundle.js.map
 app/bundle.js
 _reports
 coverage
-npm-debug.log
+npm-debug.log*
