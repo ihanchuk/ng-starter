@@ -1,7 +1,8 @@
 module.exports=function(){
     describe("easy test",function(){
-        it("shouldd run",function(){
-            return expect(false).to.be.true;
+        const ang = require("angular");
+        it("Test if angular is defined",function(){
+            return expect(ang).to.be.object;
         });
     });
 };

@@ -6,7 +6,7 @@
     "dev": "webpack-dev-server --content-base app/ --progress --colors ",
     "hot": "webpack-dev-server --content-base app/ --progress --colors --inline --hot",
     "test": "set NODE_ENV=test && karma start",
-    "prod":"webpack -p"
+    "prod": "webpack -p"
   },
   "dependencies": {
     "angular": "1.5.0"
@@ -23,6 +23,8 @@
     "karma": "^1.4.1",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-html-detailed-reporter": "^1.1.15",
     "karma-mocha": "^1.3.0",
     "karma-webpack": "^2.0.2",
     "mocha": "^3.2.0",
