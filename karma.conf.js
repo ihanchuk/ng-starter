@@ -1,10 +1,4 @@
-const path = require("path");
 const webPackConfig = require("./webpack.config");
-const entry = path.resolve(webPackConfig.context,webPackConfig.entry);
-
-var processors = {};
-
-processors[entry]=["webpack"];
 
 module.exports = function(config) {
   config.set({
@@ -17,12 +11,12 @@ module.exports = function(config) {
     frameworks: ['mocha','chai'],
 
     // list of files / patterns to load in the browser
-    files: ["./app/test/*"],
-    // files: [entry],
+    // files: ["./app/test/*"],
+    // // files: [entry],
 
     files: [
         {
-          pattern: './app/**/*.test.js', watched: false
+          pattern: './app/**/*.test.js', watched: true
         }
           // each file acts as entry point for the webpack configuration
       ],
@@ -75,7 +69,12 @@ module.exports = function(config) {
         'karma-coverage'
     ],
     htmlDetailed: {
-          splitResults: true
+        splitResults: true,
+        autoRefresh:true,
+        dir:"./_reports/TestReports"
+    },
+    coverageReporter: {
+        dir:"./_reports/CodeCoverageReport"
     },
 
     // Concurrency level
