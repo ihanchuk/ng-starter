@@ -1,19 +1,16 @@
 const path = require('path');
-const appPath =path.join(__dirname , '/app/');
-const rootEntryFile = appPath + 'index.js';
-const loadersPath = path.join(__dirname, 'node_modules');
-
-var webpack = require("webpack");
+const webpack = require("webpack");
 
 module.exports = {
-    context: appPath,
-    entry: rootEntryFile,
+    context:__dirname + '/front',
+    entry:__dirname + '/front/index.js',
     output:{
-        path:appPath,
-        filename:'bundle.js'
+        path:__dirname + '/public/js',
+        filename:'bundle.js',
+        publicPath:'js'
     },
     resolveLoader: {
-        root: loadersPath
+        root: path.join(__dirname, 'node_modules')
     },
     plugins:[
         new webpack.DefinePlugin({
