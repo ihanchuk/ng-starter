@@ -2,7 +2,7 @@ module.exports = function(){
    return ['$scope', function($scope) {
        $scope.controllerName = 'Front Controller';
        $scope.greeting = function(){
-           alert("Runing from parent controller context!");
+           alert("Runing from parent  controller context2434234!");
        }
    }];
 }
