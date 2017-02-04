@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Project Boilerplate",
   "scripts": {
-    "dev": "webpack-dev-server --content-base app/ --progress --colors ",
-    "hot": "webpack-dev-server --content-base app/ --progress --colors --inline --hot",
+    "ngdev": "webpack-dev-server --content-base public/ --progress --colors ",
+    "nghot": "webpack-dev-server --content-base public/ --progress --colors --inline --hot",
     "test": "set NODE_ENV=test && karma start",
     "prod": "webpack -p"
   },
