@@ -16302,7 +16302,7 @@
 	    return ['$scope', function ($scope) {
 	        $scope.controllerName = 'Front Controller';
 	        $scope.greeting = function () {
-	            alert("Runing directive  action with parent  controller context!");
+	            alert("Running directive  action!!!");
 	        };
 	    }];
 	};
