@@ -15,14 +15,17 @@ module.exports = function(config) {
     // // files: [entry],
 
     files: [
-        {
-          pattern: './app/**/*.test.js', watched: true
-        }
-          // each file acts as entry point for the webpack configuration
+        {pattern: './tests/*.spec.js', watched: true},
+        {pattern: './tests/**/*.spec.js', watched: true},
+        {pattern: './tests/**/**/.spec.js', watched: true},
+        {pattern: './tests/**/**/**/.spec.js', watched: true}
       ],
 
       preprocessors: {
-          './app/**/*.test.js': ['webpack','coverage'],
+          './tests/*.spec.js': ['webpack','coverage'],
+          './tests/**/*.spec.js': ['webpack','coverage'],
+          './tests/**/**/.spec.js': ['webpack','coverage'],
+          './tests/**/**/**/.spec.js': ['webpack','coverage'],
       },
 
       reporters: ['progress','htmlDetailed','coverage'],

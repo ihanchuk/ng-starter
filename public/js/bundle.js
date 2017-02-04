@@ -45,16 +45,20 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var app = __webpack_require__(1)();
-	const helloDirective = __webpack_require__(4);
-	const frontController = __webpack_require__(12);
-	app.controller('mainController', frontController()).directive("hello", helloDirective());
+	
+	app();
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var angular = __webpack_require__(2);
-	var app = angular.module("app", []);
+	const angular = __webpack_require__(2);
+	const app = angular.module("app", []);
+	
+	const helloDirective = __webpack_require__(4);
+	const frontController = __webpack_require__(12);
+	
+	app.controller('mainController', frontController()).directive("hello", helloDirective());
 	
 	module.exports = function () {
 	    return app;
@@ -16298,7 +16302,7 @@
 	    return ['$scope', function ($scope) {
 	        $scope.controllerName = 'Front Controller';
 	        $scope.greeting = function () {
-	            alert("Runing from parent controller context!");
+	            alert("Runing directive  action with parent  controller context!");
 	        };
 	    }];
 	};
