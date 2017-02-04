@@ -6,9 +6,9 @@ module.exports = {
     context:__dirname + '/front',
     entry:__dirname + '/front/index.js',
     output:{
-        path:__dirname + '/public/js',
+        path:__dirname + '/public/assets',
         filename:'bundle.js',
-        publicPath:'js'
+        publicPath:'assets'
     },
     resolveLoader: {
         root: path.join(__dirname, 'node_modules')
