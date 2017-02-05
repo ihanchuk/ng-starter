@@ -6,11 +6,13 @@
     "ngdev": "webpack-dev-server --content-base public/ --progress --colors ",
     "nghot": "webpack-dev-server --content-base public/ --progress --colors --inline --hot",
     "test": "set NODE_ENV=test && karma start",
-    "prod": "webpack -p"
+    "prod": "webpack -p",
+    "backdev":"nodemon server.js --watch back/"
   },
   "dependencies": {
     "angular": "1.5.0",
     "css-loader": "^0.26.1",
+    "express": "^4.14.1",
     "style-loader": "^0.13.1"
   },
   "devDependencies": {
@@ -33,6 +35,7 @@
     "karma-webpack": "^2.0.2",
     "mocha": "^3.2.0",
     "node-sass": "^4.4.0",
+    "nodemon": "^1.11.0",
     "raw-loader": "^0.5.1",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
